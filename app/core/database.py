@@ -44,6 +44,7 @@ class DatabaseAccessor:
                     max_queries=settings.DB_POOL_MAX_QUERIES,
                     max_inactive_connection_lifetime=settings.DB_POOL_MAX_INACTIVE_CONNECTION_LIFETIME,
                     command_timeout=60.0,
+                    ssl='require',
                     server_settings={
                         'search_path': f'{self.schema}, public'
                     }
